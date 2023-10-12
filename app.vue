@@ -1,12 +1,3 @@
-<template>
-  <!-- <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout> -->
-  <h1 class="text-3xl font-bold underline text-center">
-    Hello world!
-  </h1>
-</template>
-
 <script setup lang="ts">
 useHead({
   title: 'My GPT',
@@ -15,3 +6,12 @@ useHead({
   ]
 })
 </script>
+
+<template>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+  <!-- <h1 class="text-3xl font-bold underline text-center">
+    Hello world!
+  </h1> -->
+</template>
