@@ -4,3 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+[multiple], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], select, textarea {
+    appearance: none;
+    background-color: #fff;
+    border-color: #eee;
+    border-radius: 0;
+    border-width: 1px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    @apply rounded-xl;
+}
