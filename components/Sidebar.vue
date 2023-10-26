@@ -32,7 +32,7 @@
                   </button>
                </div>
             </div>
-            <div class="text-white text-sm dropdown dropdown-top">
+            <div class="text-white text-sm dropdown dropdown-top border-t border-gray-500">
                <button class="text-left p-3 rounded-lg border-gray-500  hover:bg-gray-700 w-full">
                   <div class="avatar placeholder gap-3">
                      <div class="bg-pink-700 text-neutral-content rounded-full w-10">

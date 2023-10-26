@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col justify-between h-[calc(100%-60px)]">
 
-    <div id="monP" class="overflow-auto">
-      <div id="mon">
+    <div id="parent" class="overflow-auto">
+      <div id="child">
         <h1 v-show="messages" class="text-4xl font-semibold text-center text-gray-200 dark:text-gray-600 my-10">
           MonGPT
         </h1>
@@ -87,31 +87,30 @@ const submitMessage = async () => {
 
   // const req = await useFetch(`/api/openai`, {
   //   method: 'post',
-  //   body: JSON.stringify(messages.value.slice(1))
+  //   // body: JSON.stringify(messages.value.slice(1))
   // });
 
   // if (req.status === 200) {
-  //   const response = await req.json();
-  //   messages.value.push({ actor: 'AI', message: response.message });
-  //   message.value = '';
+  //   alert(req)
+  //   // const response = await req.json();
+  //   // messages.value.push({ actor: 'AI', message: response.message });
+  //   // message.value = '';
   // }
   
-  setTimeout(ssss, 0);
+  setTimeout(latestMessage, 0);
   
 }
 
-const ssss = () => {
-  const monPDiv = document.getElementById("monP")
-  const monDiv = document.getElementById("mon")
-  const monHight = monDiv.offsetHeight;
-  monPDiv.scrollTo({
-    top: monHight,
-    behavior: "smooth" // For smooth scrolling, or use "auto" for instant scrolling
+const latestMessage = () => {
+  const parentDiv = document.getElementById("parent")
+  const childDiv = document.getElementById("child")
+  const heightDiv = childDiv.offsetHeight;
+  parentDiv.scrollTo({
+    top: heightDiv,
+    behavior: "smooth"
   });
 }
-// onMounted(() => {
-//   submitMessage();
-// });
+
 </script>
 
 <style lang="scss" scoped></style>

@@ -15,4 +15,8 @@ export default defineEventHandler(async (event) => {
   
   console.log(completion.choices)
   return completion.choices;
+
+  // const response = await openai.images.generate({ prompt: "A cute baby sea otter" });
+  // const image_url = response.data[0].url;
+  // return image_url;
 });
