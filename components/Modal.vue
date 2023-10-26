@@ -1,22 +1,25 @@
 <template>
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
-    <h3 class="font-bold text-lg">Hello!</h3>
-    <p class="py-4">Press ESC key or click the button below to close</p>
-    <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
-      </form>
+  <dialog 
+    class="modal modal-bottom sm:modal-middle"
+    :class="{ 'modal-open':closeModal }">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg">Hello!</h3>
+      <p class="py-4">Press ESC key or click the button below to close</p>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" @click="handleModal">✕</button>
+          <button class="btn" @click="handleModal">Close</button>
+        </form>
+      </div>
     </div>
-  </div>
-</dialog>
+  </dialog>
 </template>
 
 <script setup>
 
+const props = defineProps(['closeModal', 'handleModal']);
+
 </script>
 
 <style lang="scss" scoped>
-
 </style>

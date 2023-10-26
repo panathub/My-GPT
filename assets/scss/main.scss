@@ -4,6 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-scroll {
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    &::-webkit-scrollbar-track {
+        
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #aaa;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #888;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+    }
+}
+
 button, input, optgroup, select, textarea {
     color: inherit;
     font-family: inherit;
@@ -25,4 +48,8 @@ button, input, optgroup, select, textarea {
     outline: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     @apply rounded-xl;
+}
+
+.tooltip:before {
+    z-index: 99;
 }
